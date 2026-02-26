@@ -3,25 +3,23 @@ package se.lexicon;
 import java.util.Scanner;
 
 public class consoleCalculator {
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        boolean calculation = true;
 
-        //while(calculation) {}
-        System.out.println("Enter first number: ");
-        double num1 = scanner.nextDouble();
+            System.out.println("Enter first number: ");
+            double num1 = scanner.nextDouble();
 
-        System.out.println("Enter the second number: ");
-        double num2 = scanner.nextDouble();
+            System.out.println("Enter the second number: ");
+            double num2 = scanner.nextDouble();
 
-        System.out.println("Enter the operator(+,-,*,/): ");
-        char operator = scanner.next().charAt(0);
+            System.out.println("Enter the operator(+,-,*,/): ");
+            char operator = scanner.next().charAt(0);
 
-        double add = num1 + num2;
-        double sub = num1 - num2;
-        double mul = num1 * num2;
-        double div = num1 / num2;
+            double add = num1 + num2;
+            double sub = num1 - num2;
+            double mul = num1 * num2;
+            double div = num1 / num2;
 
         switch (operator) {
 
@@ -41,7 +39,7 @@ public class consoleCalculator {
                 System.out.println("Please select proper operator");
 
 
-
+        }
         }
 
 
@@ -51,4 +49,3 @@ public class consoleCalculator {
 
 
     }
-}
