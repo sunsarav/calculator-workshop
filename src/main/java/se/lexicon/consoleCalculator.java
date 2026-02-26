@@ -3,49 +3,62 @@ package se.lexicon;
 import java.util.Scanner;
 
 public class consoleCalculator {
-    static void main(String[] args) {
+    static void main() {
 
-        Scanner scanner = new Scanner(System.in);
+        {
+            Scanner scanner = new Scanner(System.in);
+            boolean running = true;
+            String choice;
 
-            System.out.println("Enter first number: ");
-            double num1 = scanner.nextDouble();
+            do {
+                System.out.println("Enter first number: ");
+                double num1 = scanner.nextDouble();
 
-            System.out.println("Enter the second number: ");
-            double num2 = scanner.nextDouble();
+                System.out.println("Enter the second number: ");
+                double num2 = scanner.nextDouble();
 
-            System.out.println("Enter the operator(+,-,*,/): ");
-            char operator = scanner.next().charAt(0);
+                System.out.println("Enter the operator(+,-,*,/): ");
+                char operator = scanner.next().charAt(0);
 
-            double add = num1 + num2;
-            double sub = num1 - num2;
-            double mul = num1 * num2;
-            double div = num1 / num2;
+                double add = num1 + num2;
+                double sub = num1 - num2;
+                double mul = num1 * num2;
+                double div = num1 / num2;
 
-        switch (operator) {
+                switch (operator) {
 
-            case '+':
-                System.out.println(add);
+                    case '+':
+                        System.out.println(add);
+                        break;
+                    case '-':
+                        System.out.println(sub);
+                        break;
+                    case '*':
+                        System.out.println(mul);
+                        break;
+                    case '/':
+                        System.out.println(div);
+                        break;
+                    default:
+                        System.out.println("Please select proper operator(+,-,*,/): ");
+                        break;
+                }
 
-            case '-':
-                System.out.println(sub);
+                System.out.println("Do you want to perform another calculation (y/n): ");
+                choice = scanner.next();
 
-            case '*':
-                System.out.println(mul);
-
-            case '/':
-                System.out.println(div);
-
-            default:
-                System.out.println("Please select proper operator");
-
-
+                if (choice.equalsIgnoreCase("n")) {
+                    running = false;
+                }
+            } while (running);
+            System.out.println("Program exited");
         }
-        }
-
-
-
-
-
-
-
     }
+}
+
+
+
+
+
+
+
